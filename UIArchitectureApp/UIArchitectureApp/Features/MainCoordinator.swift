@@ -28,4 +28,11 @@ final class MainCoordinator {
         let secondViewController = SecondViewController(contentView: secondContentView)
         navigationController?.pushViewController(secondViewController, animated: true)
     }
+
+    func presentThirdViewController() {
+        let thirdViewModel = ThirdViewModel()
+        let thirdContentView = ThirdContentView(viewModel: thirdViewModel)
+        let thirdViewController = ThirdViewController(contentView: thirdContentView)
+        navigationController?.pushViewController(thirdViewController, animated: true)
+    }
 }

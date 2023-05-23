@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		73D38BB6E912ABE3410BBEF8 /* Pods_UIArchitectureApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35DA811942C86E452C05A24F /* Pods_UIArchitectureApp.framework */; };
+		AF2148772A1D36F40004781E /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2148762A1D36F40004781E /* ThirdViewController.swift */; };
+		AF2148792A1D37010004781E /* ThirdContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2148782A1D37010004781E /* ThirdContentView.swift */; };
+		AF21487B2A1D370D0004781E /* ThirdViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF21487A2A1D370D0004781E /* ThirdViewModel.swift */; };
 		AFD5C2CF2A1D2F9200A4D7AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD5C2CE2A1D2F9200A4D7AA /* AppDelegate.swift */; };
 		AFD5C2D12A1D2F9200A4D7AA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD5C2D02A1D2F9200A4D7AA /* SceneDelegate.swift */; };
 		AFD5C2D82A1D2F9300A4D7AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFD5C2D72A1D2F9300A4D7AA /* Assets.xcassets */; };
@@ -27,6 +30,9 @@
 		03B0B473979418DE999B5B3C /* Pods-UIArchitectureApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIArchitectureApp.release.xcconfig"; path = "Target Support Files/Pods-UIArchitectureApp/Pods-UIArchitectureApp.release.xcconfig"; sourceTree = "<group>"; };
 		35DA811942C86E452C05A24F /* Pods_UIArchitectureApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UIArchitectureApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		799514B2D3B4923F4101BDA8 /* Pods-UIArchitectureApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIArchitectureApp.debug.xcconfig"; path = "Target Support Files/Pods-UIArchitectureApp/Pods-UIArchitectureApp.debug.xcconfig"; sourceTree = "<group>"; };
+		AF2148762A1D36F40004781E /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		AF2148782A1D37010004781E /* ThirdContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdContentView.swift; sourceTree = "<group>"; };
+		AF21487A2A1D370D0004781E /* ThirdViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewModel.swift; sourceTree = "<group>"; };
 		AFD5C2CB2A1D2F9200A4D7AA /* UIArchitectureApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIArchitectureApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFD5C2CE2A1D2F9200A4D7AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFD5C2D02A1D2F9200A4D7AA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +62,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF2148752A1D36D10004781E /* ThirdViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AF2148782A1D37010004781E /* ThirdContentView.swift */,
+				AF2148762A1D36F40004781E /* ThirdViewController.swift */,
+				AF21487A2A1D370D0004781E /* ThirdViewModel.swift */,
+			);
+			path = ThirdViewController;
+			sourceTree = "<group>";
+		};
 		AFD5C2C22A1D2F9200A4D7AA = {
 			isa = PBXGroup;
 			children = (
@@ -86,11 +102,12 @@
 		AFD5C2E22A1D2FCF00A4D7AA /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				AFD5C2ED2A1D2FCF00A4D7AA /* MainCoordinator.swift */,
 				AFD5C2E42A1D2FCF00A4D7AA /* HostingViewContoller.swift */,
 				AFD5C2E32A1D2FCF00A4D7AA /* InitialViewController.swift */,
+				AFD5C2ED2A1D2FCF00A4D7AA /* MainCoordinator.swift */,
 				AFD5C2E52A1D2FCF00A4D7AA /* FirstViewController */,
 				AFD5C2E92A1D2FCF00A4D7AA /* SecondViewController */,
+				AF2148752A1D36D10004781E /* ThirdViewController */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -264,10 +281,13 @@
 				AFD5C2D12A1D2F9200A4D7AA /* SceneDelegate.swift in Sources */,
 				AFD5C2F02A1D2FCF00A4D7AA /* FirstViewController.swift in Sources */,
 				AFD5C2F12A1D2FCF00A4D7AA /* FirstViewModel.swift in Sources */,
+				AF2148792A1D37010004781E /* ThirdContentView.swift in Sources */,
 				AFD5C2EE2A1D2FCF00A4D7AA /* InitialViewController.swift in Sources */,
 				AFD5C2F62A1D2FCF00A4D7AA /* MainCoordinator.swift in Sources */,
 				AFD5C2EF2A1D2FCF00A4D7AA /* HostingViewContoller.swift in Sources */,
+				AF21487B2A1D370D0004781E /* ThirdViewModel.swift in Sources */,
 				AFD5C2F42A1D2FCF00A4D7AA /* SecondViewController.swift in Sources */,
+				AF2148772A1D36F40004781E /* ThirdViewController.swift in Sources */,
 				AFD5C2F22A1D2FCF00A4D7AA /* FirstContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

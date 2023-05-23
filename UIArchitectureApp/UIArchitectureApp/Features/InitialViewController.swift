@@ -12,6 +12,8 @@ final class InitialViewController: UIViewController {
 
     private let firstButton = UIButton()
     private let secondButton = UIButton()
+    private let thirdButton = UIButton()
+    private let stackView = UIStackView()
 
     private lazy var coordinator: MainCoordinator? = .init(navigationController: navigationController)
 
@@ -19,27 +21,46 @@ final class InitialViewController: UIViewController {
         super.viewDidLoad()
 
         view.backgroundColor = .white
-        view.addSubview(firstButton)
-        view.addSubview(secondButton)
+        view.addSubview(stackView)
+
+        stackView.addArrangedSubview(firstButton)
+        stackView.addArrangedSubview(secondButton)
+        stackView.addArrangedSubview(thirdButton)
+
+        stackView.axis = .vertical
+        stackView.alignment = .center
+        stackView.distribution = .fillEqually
+        stackView.spacing = 20
 
         firstButton.setTitle("FirstViewController", for: .normal)
         firstButton.backgroundColor = .black
         firstButton.addTarget(self, action: #selector(didTapFirstButton), for: .touchUpInside)
-        firstButton.snp.makeConstraints {
-            $0.centerX.equalToSuperview()
-            $0.centerY.equalToSuperview().offset(-32)
-            $0.width.equalTo(200)
-            $0.height.equalTo(40)
-        }
 
         secondButton.setTitle("SecondViewController", for: .normal)
         secondButton.addTarget(self, action: #selector(didTapSecondButton), for: .touchUpInside)
         secondButton.backgroundColor = .black
-        secondButton.snp.makeConstraints {
-            $0.centerX.equalToSuperview()
-            $0.centerY.equalToSuperview().offset(32)
+
+        thirdButton.setTitle("ThirdViewController", for: .normal)
+        thirdButton.addTarget(self, action: #selector(didTapThirdButton), for: .touchUpInside)
+        thirdButton.backgroundColor = .black
+
+        firstButton.snp.makeConstraints {
             $0.width.equalTo(200)
-            $0.height.equalTo(40)
+            $0.height.equalTo(48)
+        }
+
+        secondButton.snp.makeConstraints {
+            $0.width.equalTo(200)
+            $0.height.equalTo(48)
+        }
+
+        thirdButton.snp.makeConstraints {
+            $0.width.equalTo(200)
+            $0.height.equalTo(48)
+        }
+
+        stackView.snp.makeConstraints {
+            $0.center.equalToSuperview()
         }
     }
 
@@ -60,5 +81,9 @@ final class InitialViewController: UIViewController {
 
     @objc func didTapSecondButton() {
         coordinator?.presentSecondViewController()
+    }
+
+    @objc func didTapThirdButton() {
+        coordinator?.presentThirdViewController()
     }
 }
