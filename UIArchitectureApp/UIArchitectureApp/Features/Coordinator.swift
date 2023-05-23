@@ -1,0 +1,31 @@
+//
+//  Coordinator.swift
+//  SwiftUIPractices
+//
+//  Created by Matija Kruljac on 23.05.2023..
+//
+
+import UIKit
+
+final class Coordinator {
+
+    private var navigationController: UINavigationController?
+
+    init(navigationController: UINavigationController?) {
+        self.navigationController = navigationController
+    }
+
+    func presentFirstViewController() {
+        let firstViewModel = FirstViewModel()
+        let firstContentView = FirstContentView(viewModel: firstViewModel)
+        let firstViewController = FirstViewController(contentView: firstContentView)
+        navigationController?.pushViewController(firstViewController, animated: true)
+    }
+
+    func presentSecondViewController() {
+        let secondViewModel = SecondViewModel()
+        let secondContentView = SecondContentView(viewModel: secondViewModel, counterData: CounterData())
+        let secondViewController = SecondViewController(contentView: secondContentView)
+        navigationController?.pushViewController(secondViewController, animated: true)
+    }
+}
