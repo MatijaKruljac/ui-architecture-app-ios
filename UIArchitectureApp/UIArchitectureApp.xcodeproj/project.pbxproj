@@ -20,7 +20,7 @@
 		AFD5C2F32A1D2FCF00A4D7AA /* SecondViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD5C2EA2A1D2FCF00A4D7AA /* SecondViewModel.swift */; };
 		AFD5C2F42A1D2FCF00A4D7AA /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD5C2EB2A1D2FCF00A4D7AA /* SecondViewController.swift */; };
 		AFD5C2F52A1D2FCF00A4D7AA /* SecondContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD5C2EC2A1D2FCF00A4D7AA /* SecondContentView.swift */; };
-		AFD5C2F62A1D2FCF00A4D7AA /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD5C2ED2A1D2FCF00A4D7AA /* Coordinator.swift */; };
+		AFD5C2F62A1D2FCF00A4D7AA /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD5C2ED2A1D2FCF00A4D7AA /* MainCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,7 +41,7 @@
 		AFD5C2EA2A1D2FCF00A4D7AA /* SecondViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewModel.swift; sourceTree = "<group>"; };
 		AFD5C2EB2A1D2FCF00A4D7AA /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		AFD5C2EC2A1D2FCF00A4D7AA /* SecondContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondContentView.swift; sourceTree = "<group>"; };
-		AFD5C2ED2A1D2FCF00A4D7AA /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		AFD5C2ED2A1D2FCF00A4D7AA /* MainCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,7 +86,7 @@
 		AFD5C2E22A1D2FCF00A4D7AA /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				AFD5C2ED2A1D2FCF00A4D7AA /* Coordinator.swift */,
+				AFD5C2ED2A1D2FCF00A4D7AA /* MainCoordinator.swift */,
 				AFD5C2E42A1D2FCF00A4D7AA /* HostingViewContoller.swift */,
 				AFD5C2E32A1D2FCF00A4D7AA /* InitialViewController.swift */,
 				AFD5C2E52A1D2FCF00A4D7AA /* FirstViewController */,
@@ -265,7 +265,7 @@
 				AFD5C2F02A1D2FCF00A4D7AA /* FirstViewController.swift in Sources */,
 				AFD5C2F12A1D2FCF00A4D7AA /* FirstViewModel.swift in Sources */,
 				AFD5C2EE2A1D2FCF00A4D7AA /* InitialViewController.swift in Sources */,
-				AFD5C2F62A1D2FCF00A4D7AA /* Coordinator.swift in Sources */,
+				AFD5C2F62A1D2FCF00A4D7AA /* MainCoordinator.swift in Sources */,
 				AFD5C2EF2A1D2FCF00A4D7AA /* HostingViewContoller.swift in Sources */,
 				AFD5C2F42A1D2FCF00A4D7AA /* SecondViewController.swift in Sources */,
 				AFD5C2F22A1D2FCF00A4D7AA /* FirstContentView.swift in Sources */,

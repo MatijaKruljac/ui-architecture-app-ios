@@ -1,5 +1,5 @@
 //
-//  Coordinator.swift
+//  MainCoordinator.swift
 //  SwiftUIPractices
 //
 //  Created by Matija Kruljac on 23.05.2023..
@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class Coordinator {
+final class MainCoordinator {
 
     private var navigationController: UINavigationController?
 

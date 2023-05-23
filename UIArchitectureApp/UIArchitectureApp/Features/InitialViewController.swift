@@ -13,7 +13,7 @@ final class InitialViewController: UIViewController {
     private let firstButton = UIButton()
     private let secondButton = UIButton()
 
-    private lazy var coordinator: Coordinator? = .init(navigationController: navigationController)
+    private lazy var coordinator: MainCoordinator? = .init(navigationController: navigationController)
 
     override func viewDidLoad() {
         super.viewDidLoad()
