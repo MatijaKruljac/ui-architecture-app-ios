@@ -12,8 +12,14 @@ final class FirstViewModel: ObservableObject {
     @Published var firstPoperty: Int = 0
     @Published var secondProperty: Int = 0
 
+    private weak var coordinator: MainCoordinator?
+
     private var firstTimer: Timer?
     private var secondTimer: Timer?
+
+    init(coordinator: MainCoordinator) {
+        self.coordinator = coordinator
+    }
 
     deinit {
         firstTimer?.invalidate()
@@ -21,6 +27,19 @@ final class FirstViewModel: ObservableObject {
 
         secondTimer?.invalidate()
         secondTimer = nil
+    }
+
+    func resetValues() {
+        firstPoperty = 0
+        secondProperty = 0
+    }
+
+    func presentSecondViewController() {
+        coordinator?.presentSecondViewController()
+    }
+
+    func presentThirdViewController() {
+        coordinator?.presentThirdViewController()
     }
 
     @discardableResult
@@ -39,10 +58,5 @@ final class FirstViewModel: ObservableObject {
         }
 
         return self
-    }
-
-    func resetValues() {
-        firstPoperty = 0
-        secondProperty = 0
     }
 }

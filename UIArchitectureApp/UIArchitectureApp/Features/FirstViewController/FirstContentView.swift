@@ -14,9 +14,17 @@ struct FirstContentView: View {
     var body: some View {
         VStack(spacing: 24) {
             Text("** Observed **")
-            VStack {
+            VStack(spacing: 4) {
                 Text("First publisher: \(viewModel.firstPoperty)").foregroundColor(.red)
                 Text("Second publisher: \(viewModel.secondProperty)").foregroundColor(.red)
+            }
+            VStack(spacing: 4) {
+                Button("Present SecondViewController") {
+                    viewModel.presentSecondViewController()
+                }
+                Button("Present ThirdViewController") {
+                    viewModel.presentThirdViewController()
+                }
             }
         }.onAppear {
             viewModel

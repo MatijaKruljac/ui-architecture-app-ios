@@ -18,10 +18,15 @@ struct SecondContentView: View {
     @ObservedObject var counterData: CounterData
 
     var body: some View {
-        VStack(spacing: 24) {
-            Text("** Observed **")
-            Text("Counter: \(counterData.value)").foregroundColor(.red)
-        }.background(.white)
+        VStack(spacing: 48) {
+            VStack(spacing: 24) {
+                Text("** Observed **")
+                Text("Counter: \(counterData.value)").foregroundColor(.red)
+            }.background(.white)
+            Button("Present FirstViewController") {
+                viewModel.presentFirstViewController()
+            }
+        }
     }
 
     func incrementCounter() {
