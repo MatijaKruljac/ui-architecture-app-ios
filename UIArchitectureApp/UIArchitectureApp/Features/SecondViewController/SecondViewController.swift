@@ -31,17 +31,6 @@ final class SecondViewController: HostingViewController<SecondContentView> {
         navigationItem.rightBarButtonItems = [decrementValueButtonItem, incrementValueButtonItem]
     }
 
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-
-        let appearance = UINavigationBarAppearance()
-        appearance.configureWithOpaqueBackground()
-        appearance.backgroundColor = .yellow
-
-        navigationController?.navigationBar.standardAppearance = appearance
-        navigationController?.navigationBar.scrollEdgeAppearance = appearance
-    }
-
     @objc func didTapIncrementValueButtonItem() {
         rootView.incrementCounter()
     }

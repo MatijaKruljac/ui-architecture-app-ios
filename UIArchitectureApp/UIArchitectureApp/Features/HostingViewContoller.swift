@@ -13,6 +13,10 @@ class HostingViewController<ContentView: View>: UIViewController {
 
     private let hostingController: UIHostingController<ContentView>
 
+    var navigationBarBackgroundColor: UIColor {
+        .yellow
+    }
+
     var rootView: ContentView {
         hostingController.rootView
     }
@@ -33,5 +37,16 @@ class HostingViewController<ContentView: View>: UIViewController {
         hostingController.view.snp.makeConstraints {
             $0.edges.equalToSuperview()
         }
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithOpaqueBackground()
+        appearance.backgroundColor = navigationBarBackgroundColor
+
+        navigationController?.navigationBar.standardAppearance = appearance
+        navigationController?.navigationBar.scrollEdgeAppearance = appearance
     }
 }

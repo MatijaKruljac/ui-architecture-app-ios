@@ -9,20 +9,13 @@ import UIKit
 
 final class ThirdViewController: HostingViewController<ThirdContentView> {
 
+    override var navigationBarBackgroundColor: UIColor {
+        .magenta
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         title = "Third"
-    }
-
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-
-        let appearance = UINavigationBarAppearance()
-        appearance.configureWithOpaqueBackground()
-        appearance.backgroundColor = .yellow
-
-        navigationController?.navigationBar.standardAppearance = appearance
-        navigationController?.navigationBar.scrollEdgeAppearance = appearance
     }
 }

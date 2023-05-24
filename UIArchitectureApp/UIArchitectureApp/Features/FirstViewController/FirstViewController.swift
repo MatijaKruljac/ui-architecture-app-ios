@@ -24,17 +24,6 @@ final class FirstViewController: HostingViewController<FirstContentView> {
         navigationItem.rightBarButtonItem = resetValuesButtonItem
     }
 
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-
-        let appearance = UINavigationBarAppearance()
-        appearance.configureWithOpaqueBackground()
-        appearance.backgroundColor = .yellow
-
-        navigationController?.navigationBar.standardAppearance = appearance
-        navigationController?.navigationBar.scrollEdgeAppearance = appearance
-    }
-
     @objc func didTapResetValuesButtonItem() {
         rootView.viewModel.resetValues()
     }
