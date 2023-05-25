@@ -27,6 +27,8 @@
 		AF21489F2A1F66560004781E /* ItemDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF21489E2A1F66560004781E /* ItemDetailsViewController.swift */; };
 		AF2148A12A1F665F0004781E /* ItemDetailsContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2148A02A1F665F0004781E /* ItemDetailsContentView.swift */; };
 		AF2148A32A1F666A0004781E /* ItemDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2148A22A1F666A0004781E /* ItemDetailsViewModel.swift */; };
+		AF2148A62A1F88820004781E /* PopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2148A52A1F88820004781E /* PopUpView.swift */; };
+		AF2148A82A1F889B0004781E /* SheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2148A72A1F889B0004781E /* SheetView.swift */; };
 		AFD5C2CF2A1D2F9200A4D7AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD5C2CE2A1D2F9200A4D7AA /* AppDelegate.swift */; };
 		AFD5C2D12A1D2F9200A4D7AA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD5C2D02A1D2F9200A4D7AA /* SceneDelegate.swift */; };
 		AFD5C2D82A1D2F9300A4D7AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFD5C2D72A1D2F9300A4D7AA /* Assets.xcassets */; };
@@ -65,6 +67,8 @@
 		AF21489E2A1F66560004781E /* ItemDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailsViewController.swift; sourceTree = "<group>"; };
 		AF2148A02A1F665F0004781E /* ItemDetailsContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailsContentView.swift; sourceTree = "<group>"; };
 		AF2148A22A1F666A0004781E /* ItemDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailsViewModel.swift; sourceTree = "<group>"; };
+		AF2148A52A1F88820004781E /* PopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpView.swift; sourceTree = "<group>"; };
+		AF2148A72A1F889B0004781E /* SheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetView.swift; sourceTree = "<group>"; };
 		AFD5C2CB2A1D2F9200A4D7AA /* UIArchitectureApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIArchitectureApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFD5C2CE2A1D2F9200A4D7AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFD5C2D02A1D2F9200A4D7AA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -153,6 +157,7 @@
 				AF2148852A1EAD230004781E /* DashboardContentView.swift */,
 				AF2148872A1EAD2D0004781E /* DashboardViewController.swift */,
 				AF2148892A1EAD3A0004781E /* DashboardViewModel.swift */,
+				AF2148A42A1F88670004781E /* Subviews */,
 			);
 			path = DashboardScreen;
 			sourceTree = "<group>";
@@ -185,6 +190,15 @@
 				AF2148A22A1F666A0004781E /* ItemDetailsViewModel.swift */,
 			);
 			path = ItemDetails;
+			sourceTree = "<group>";
+		};
+		AF2148A42A1F88670004781E /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				AF2148A52A1F88820004781E /* PopUpView.swift */,
+				AF2148A72A1F889B0004781E /* SheetView.swift */,
+			);
+			path = Subviews;
 			sourceTree = "<group>";
 		};
 		AFD5C2C22A1D2F9200A4D7AA = {
@@ -402,6 +416,7 @@
 				AF2148792A1D37010004781E /* ThirdContentView.swift in Sources */,
 				AFD5C2EE2A1D2FCF00A4D7AA /* InitialViewController.swift in Sources */,
 				AF21488A2A1EAD3A0004781E /* DashboardViewModel.swift in Sources */,
+				AF2148A62A1F88820004781E /* PopUpView.swift in Sources */,
 				AFD5C2F62A1D2FCF00A4D7AA /* NavigationCoordinator.swift in Sources */,
 				AF2148962A1EC2720004781E /* ProfileSettingsContentView.swift in Sources */,
 				AF21489A2A1EC2880004781E /* ProfileSettingsViewModel.swift in Sources */,
@@ -416,6 +431,7 @@
 				AF2148912A1EB3210004781E /* DashboardCoordinator.swift in Sources */,
 				AF2148772A1D36F40004781E /* ThirdViewController.swift in Sources */,
 				AF21489F2A1F66560004781E /* ItemDetailsViewController.swift in Sources */,
+				AF2148A82A1F889B0004781E /* SheetView.swift in Sources */,
 				AFD5C2F22A1D2FCF00A4D7AA /* FirstContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
