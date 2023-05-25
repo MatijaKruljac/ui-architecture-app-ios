@@ -50,6 +50,6 @@ struct PopUpView: View {
                 .border(Color.white, width: 2)
                 .background(Color.blue)
             }
-        }
+        }.animation(.easeIn, value: shouldShow)
     }
 }
