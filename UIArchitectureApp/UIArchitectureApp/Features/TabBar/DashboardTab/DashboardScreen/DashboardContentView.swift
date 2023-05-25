@@ -7,18 +7,12 @@
 
 import SwiftUI
 
-final class DashboardModel: ObservableObject {
-
-    @Published var shouldPresentInfoDialog: Bool = false
-    @Published var shouldPresentSheetView: Bool = false
-}
-
 struct DashboardContentView: View {
 
     @ObservedObject var viewModel: DashboardViewModel
+    @ObservedObject var state: DashboardState
 
     @State private var shouldPresentSheetView: Bool = false
-    @State private var shouldShowPopUpView: Bool = false
 
     var body: some View {
         ZStack {
@@ -26,10 +20,8 @@ struct DashboardContentView: View {
                 Button("Push ItemDetailsViewController") {
                     self.viewModel.pushItemDetails()
                 }
-                Button("Show PopUpView") {
-                    withAnimation(.linear(duration: 0.3)) {
-                        self.shouldShowPopUpView.toggle()
-                    }
+                Button("Show Info PopUpView") {
+                    self.state.shouldPresentInfoDialog.toggle()
                 }
                 Button("Show SheetView") {
                     self.shouldPresentSheetView.toggle()
@@ -38,11 +30,12 @@ struct DashboardContentView: View {
                     SheetView()
                 }
             }
+
             PopUpView(
                 title: "Lorem ipsum dolor",
                 message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
                 buttonText: "Ok",
-                show: $shouldShowPopUpView
+                show: $state.shouldPresentInfoDialog
             )
         }
     }

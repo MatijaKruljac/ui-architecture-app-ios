@@ -15,14 +15,13 @@ class HostingViewController<ContentView: View>: UIViewController {
         .yellow
     }
 
-    var rootView: ContentView {
-        hostingController.rootView
-    }
+    var rootView: ContentView
 
     private let hostingController: UIHostingController<ContentView>
 
     init(contentView: ContentView) {
         hostingController = UIHostingController(rootView: contentView)
+        rootView = hostingController.rootView
         super.init(nibName: nil, bundle: nil)
     }
 

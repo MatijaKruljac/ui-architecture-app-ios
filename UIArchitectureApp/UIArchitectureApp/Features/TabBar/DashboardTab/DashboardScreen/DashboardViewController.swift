@@ -5,6 +5,7 @@
 //  Created by Matija Kruljac on 24.05.2023..
 //
 
+import SwiftUI
 import UIKit
 
 final class DashboardViewController: HostingViewController<DashboardContentView> {
@@ -33,6 +34,6 @@ final class DashboardViewController: HostingViewController<DashboardContentView>
     }
 
     @objc func didTapInfoButtonItem() {
-        
+        rootView.state.shouldPresentInfoDialog.toggle()
     }
 }

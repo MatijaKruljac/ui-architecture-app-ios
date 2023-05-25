@@ -29,6 +29,7 @@
 		AF2148A32A1F666A0004781E /* ItemDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2148A22A1F666A0004781E /* ItemDetailsViewModel.swift */; };
 		AF2148A62A1F88820004781E /* PopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2148A52A1F88820004781E /* PopUpView.swift */; };
 		AF2148A82A1F889B0004781E /* SheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2148A72A1F889B0004781E /* SheetView.swift */; };
+		AF2148AA2A1F97860004781E /* DashboardState.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2148A92A1F97860004781E /* DashboardState.swift */; };
 		AFD5C2CF2A1D2F9200A4D7AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD5C2CE2A1D2F9200A4D7AA /* AppDelegate.swift */; };
 		AFD5C2D12A1D2F9200A4D7AA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD5C2D02A1D2F9200A4D7AA /* SceneDelegate.swift */; };
 		AFD5C2D82A1D2F9300A4D7AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFD5C2D72A1D2F9300A4D7AA /* Assets.xcassets */; };
@@ -69,6 +70,7 @@
 		AF2148A22A1F666A0004781E /* ItemDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailsViewModel.swift; sourceTree = "<group>"; };
 		AF2148A52A1F88820004781E /* PopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpView.swift; sourceTree = "<group>"; };
 		AF2148A72A1F889B0004781E /* SheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetView.swift; sourceTree = "<group>"; };
+		AF2148A92A1F97860004781E /* DashboardState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardState.swift; sourceTree = "<group>"; };
 		AFD5C2CB2A1D2F9200A4D7AA /* UIArchitectureApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIArchitectureApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFD5C2CE2A1D2F9200A4D7AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFD5C2D02A1D2F9200A4D7AA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				AF2148852A1EAD230004781E /* DashboardContentView.swift */,
+				AF2148A92A1F97860004781E /* DashboardState.swift */,
 				AF2148872A1EAD2D0004781E /* DashboardViewController.swift */,
 				AF2148892A1EAD3A0004781E /* DashboardViewModel.swift */,
 				AF2148A42A1F88670004781E /* Subviews */,
@@ -407,6 +410,7 @@
 				AFD5C2F52A1D2FCF00A4D7AA /* SecondContentView.swift in Sources */,
 				AF21489C2A1F54210004781E /* TabBarController.swift in Sources */,
 				AFD5C2F32A1D2FCF00A4D7AA /* SecondViewModel.swift in Sources */,
+				AF2148AA2A1F97860004781E /* DashboardState.swift in Sources */,
 				AFD5C2CF2A1D2F9200A4D7AA /* AppDelegate.swift in Sources */,
 				AFD5C2D12A1D2F9200A4D7AA /* SceneDelegate.swift in Sources */,
 				AFD5C2F02A1D2FCF00A4D7AA /* FirstViewController.swift in Sources */,

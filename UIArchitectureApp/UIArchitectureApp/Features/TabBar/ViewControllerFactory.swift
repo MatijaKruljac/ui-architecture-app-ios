@@ -32,7 +32,8 @@ extension ViewControllerFactory {
 
     static func tabDashboardViewController(coordinator: DashboardCoordinator) -> DashboardViewController {
         let dashboardViewModel = DashboardViewModel(coordinator: coordinator)
-        let dashboardContentView = DashboardContentView(viewModel: dashboardViewModel)
+        let dashboardState = DashboardState()
+        let dashboardContentView = DashboardContentView(viewModel: dashboardViewModel, state: dashboardState)
 
         return DashboardViewController(contentView: dashboardContentView)
     }
