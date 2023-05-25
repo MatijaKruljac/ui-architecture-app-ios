@@ -11,8 +11,6 @@ import UIKit
 
 class HostingViewController<ContentView: View>: UIViewController {
 
-    private let hostingController: UIHostingController<ContentView>
-
     var navigationBarBackgroundColor: UIColor {
         .yellow
     }
@@ -21,8 +19,10 @@ class HostingViewController<ContentView: View>: UIViewController {
         hostingController.rootView
     }
 
+    private let hostingController: UIHostingController<ContentView>
+
     init(contentView: ContentView) {
-        self.hostingController = UIHostingController(rootView: contentView)
+        hostingController = UIHostingController(rootView: contentView)
         super.init(nibName: nil, bundle: nil)
     }
 

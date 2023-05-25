@@ -12,12 +12,12 @@ final class FirstViewModel: ObservableObject {
     @Published var firstPoperty: Int = 0
     @Published var secondProperty: Int = 0
 
-    private weak var coordinator: MainCoordinator?
+    private weak var coordinator: NavigationCoordinator?
 
     private var firstTimer: Timer?
     private var secondTimer: Timer?
 
-    init(coordinator: MainCoordinator) {
+    init(coordinator: NavigationCoordinator) {
         self.coordinator = coordinator
     }
 
@@ -35,11 +35,11 @@ final class FirstViewModel: ObservableObject {
     }
 
     func presentSecondViewController() {
-        coordinator?.presentSecondViewController()
+        coordinator?.pushSecondViewController()
     }
 
     func presentThirdViewController() {
-        coordinator?.presentThirdViewController()
+        coordinator?.pushThirdViewController()
     }
 
     @discardableResult

@@ -11,9 +11,9 @@ final class ThirdViewModel: ObservableObject {
 
     @Published var property: Int = 0
 
-    private weak var coordinator: MainCoordinator?
+    private weak var coordinator: NavigationCoordinator?
 
-    init(coordinator: MainCoordinator) {
+    init(coordinator: NavigationCoordinator) {
         self.coordinator = coordinator
     }
 }

@@ -15,7 +15,7 @@ final class InitialViewController: UIViewController {
     private let thirdButton = UIButton()
     private let stackView = UIStackView()
 
-    private lazy var coordinator: MainCoordinator? = .init(navigationController: navigationController)
+    private lazy var coordinator: NavigationCoordinator? = .init(navigationController: navigationController)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -76,14 +76,14 @@ final class InitialViewController: UIViewController {
     }
 
     @objc func didTapFirstButton() {
-        coordinator?.presentFirstViewController()
+        coordinator?.pushFirstViewController()
     }
 
     @objc func didTapSecondButton() {
-        coordinator?.presentSecondViewController()
+        coordinator?.pushSecondViewController()
     }
 
     @objc func didTapThirdButton() {
-        coordinator?.presentThirdViewController()
+        coordinator?.pushThirdViewController()
     }
 }

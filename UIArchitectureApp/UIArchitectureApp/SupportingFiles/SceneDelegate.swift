@@ -11,13 +11,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
 
+    private let tabBarController = TabBarController()
+
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let scene: UIWindowScene = (scene as? UIWindowScene) else {
             return
         }
 
         window = UIWindow(windowScene: scene)
-        window?.rootViewController = UINavigationController(rootViewController: InitialViewController())
+        window?.rootViewController = tabBarController // UINavigationController(rootViewController: InitialViewController())
         window?.makeKeyAndVisible()
     }
 
@@ -48,7 +50,24 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
     }
-
-
 }
 
+class TEST: UIViewController {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = .white
+        title = "Dashboard"
+        tabBarItem = UITabBarItem(title: "Dashboard", image: UIImage(systemName: "1.circle"), tag: 0)
+    }
+}
+
+class TEST1: UIViewController {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = .white
+        title = "Dashboard"
+        tabBarItem = UITabBarItem(title: "Dashboard", image: UIImage(systemName: "1.circle"), tag: 1)
+    }
+}
