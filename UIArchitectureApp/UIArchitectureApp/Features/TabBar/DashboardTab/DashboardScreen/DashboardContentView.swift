@@ -35,7 +35,7 @@ struct DashboardContentView: View {
                 title: "Lorem ipsum dolor",
                 message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
                 buttonText: "Ok",
-                show: $state.shouldPresentInfoDialog
+                shouldShow: $state.shouldPresentInfoDialog
             )
         }
     }

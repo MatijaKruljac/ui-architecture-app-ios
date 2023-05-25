@@ -13,12 +13,12 @@ struct PopUpView: View {
     var message: String
     var buttonText: String
 
-    @Binding var show: Bool
+    @Binding var shouldShow: Bool
 
     var body: some View {
         ZStack {
-            if show {
-                Color.black.opacity(show ? 0.3 : 0).edgesIgnoringSafeArea(.all)
+            if shouldShow {
+                Color.black.opacity(shouldShow ? 0.3 : 0).edgesIgnoringSafeArea(.all)
 
                 VStack(alignment: .center, spacing: 0) {
                     Text(title)
@@ -35,7 +35,7 @@ struct PopUpView: View {
                     Button(action: {
                         // Dismiss the PopUpView
                         withAnimation(.linear(duration: 0.3)) {
-                            show = false
+                            shouldShow = false
                         }
                     }, label: {
                         Text(buttonText)
