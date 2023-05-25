@@ -30,6 +30,11 @@ final class TabBarController: UITabBarController {
 
         super.init(nibName: nil, bundle: nil)
 
+        tabBar.tintColor = .white
+        tabBar.unselectedItemTintColor = .lightText
+        tabBar.isTranslucent = false
+        tabBar.backgroundColor = .brown
+
         viewControllers = [
             dashboardNavigationController,
             profileNavigationController
