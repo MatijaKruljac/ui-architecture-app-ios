@@ -16,7 +16,8 @@ final class ProfileCoordinator {
     }
 
     func pushProfileSettings() {
-        let profileSettingsViewController = ViewControllerFactory.profileSettingsViewController(navigationController)
+        let profileSettingsViewController = ViewControllerFactory
+            .profileSettingsViewController(navigationController: navigationController)
         navigationController?.pushViewController(profileSettingsViewController, animated: true)
     }
 }

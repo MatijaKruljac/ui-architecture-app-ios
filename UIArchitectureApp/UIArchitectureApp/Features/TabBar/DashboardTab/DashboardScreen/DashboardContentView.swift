@@ -20,6 +20,9 @@ struct DashboardContentView: View {
                 Button("Push ItemDetailsViewController") {
                     self.viewModel.pushItemDetails()
                 }
+                Button("Push ProfileSettingsViewController") {
+                    self.viewModel.pushProfileSettings()
+                }
                 Button("Show Info PopUpView") {
                     self.state.shouldPresentInfoDialog.toggle()
                 }

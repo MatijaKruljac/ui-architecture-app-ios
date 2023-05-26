@@ -16,7 +16,8 @@ final class DashboardCoordinator {
     }
 
     func pushItemDetails() {
-        let itemDetailsViewController = ViewControllerFactory.itemDetailsViewController(navigationController)
+        let itemDetailsViewController = ViewControllerFactory
+            .itemDetailsViewController(navigationController: navigationController)
         navigationController?.pushViewController(itemDetailsViewController, animated: true)
     }
 }

@@ -20,12 +20,12 @@ final class TabBarController: UITabBarController {
     init() {
         dashboardNavigationController = UINavigationController()
         dashboardCoordinator = DashboardCoordinator(navigationController: dashboardNavigationController)
-        dashboardViewController = ViewControllerFactory.tabDashboardViewController(coordinator: dashboardCoordinator)
+        dashboardViewController = ViewControllerFactory.tabDashboardViewController(navigationController: dashboardNavigationController)
         dashboardNavigationController.viewControllers = [dashboardViewController]
 
         profileNavigationController = UINavigationController()
         profileCoordinator = ProfileCoordinator(navigationController: profileNavigationController)
-        profileViewController = ViewControllerFactory.tabProfileViewController(coordinator: profileCoordinator)
+        profileViewController = ViewControllerFactory.tabProfileViewController(navigationController: profileNavigationController)
         profileNavigationController.viewControllers = [profileViewController]
 
         super.init(nibName: nil, bundle: nil)

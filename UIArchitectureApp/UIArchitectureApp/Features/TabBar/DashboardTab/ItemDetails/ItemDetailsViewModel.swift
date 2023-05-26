@@ -5,15 +5,17 @@
 //  Created by Matija Kruljac on 25.05.2023..
 //
 
-import Foundation
+import UIKit
 
 final class ItemDetailsViewModel: ObservableObject {
 
     @Published var property: Int = 0
 
-    private weak var coordinator: DashboardCoordinator?
+    private let coordinator: DashboardCoordinator
 
-    init(coordinator: DashboardCoordinator) {
-        self.coordinator = coordinator
+    private weak var navigationController: UINavigationController?
+
+    init(navigationController: UINavigationController?) {
+        coordinator = DashboardCoordinator(navigationController: navigationController)
     }
 }
