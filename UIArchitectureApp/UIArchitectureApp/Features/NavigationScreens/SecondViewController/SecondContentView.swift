@@ -23,8 +23,8 @@ struct SecondContentView: View {
                 Text("** Observed **")
                 Text("Counter: \(counterData.value)").foregroundColor(.red)
             }.background(.white)
-            Button("Present FirstViewController") {
-                viewModel.presentFirstViewController()
+            Button("Push FirstViewController") {
+                viewModel.pushFirstViewController()
             }
         }
     }

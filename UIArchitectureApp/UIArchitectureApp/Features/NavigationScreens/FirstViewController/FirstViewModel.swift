@@ -34,11 +34,11 @@ final class FirstViewModel: ObservableObject {
         secondProperty = 0
     }
 
-    func presentSecondViewController() {
+    func pushSecondViewController() {
         coordinator?.pushSecondViewController()
     }
 
-    func presentThirdViewController() {
+    func pushThirdViewController() {
         coordinator?.pushThirdViewController()
     }
 

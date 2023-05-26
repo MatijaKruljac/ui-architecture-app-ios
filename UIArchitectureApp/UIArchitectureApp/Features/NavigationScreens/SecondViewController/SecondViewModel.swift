@@ -17,7 +17,7 @@ final class SecondViewModel: ObservableObject {
         self.coordinator = coordinator
     }
 
-    func presentFirstViewController() {
+    func pushFirstViewController() {
         coordinator?.pushFirstViewController()
     }
 }
