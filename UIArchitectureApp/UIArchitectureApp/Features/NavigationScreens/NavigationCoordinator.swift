@@ -39,7 +39,7 @@ final class NavigationCoordinator {
     func pushTabBarController() {
         let scene = UIApplication.shared.connectedScenes.first
         if let sceneDelegate = scene?.delegate as? SceneDelegate {
-            sceneDelegate.window?.rootViewController = TabBarController()
+            sceneDelegate.switchToTabBarController()
         }
     }
 }
