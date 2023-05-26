@@ -10,10 +10,6 @@ import SnapKit
 
 final class BottomSheetCoordinator: CoordinatorProtocol {
 
-    var rootView: BottomSheetContentView? {
-        bottomSheetViewController?.rootView
-    }
-
     private weak var navigationController: UINavigationController?
 
     private var backgroundView: UIView?
