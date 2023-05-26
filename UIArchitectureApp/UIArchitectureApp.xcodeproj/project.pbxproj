@@ -31,6 +31,11 @@
 		AF2148A82A1F889B0004781E /* SheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2148A72A1F889B0004781E /* SheetView.swift */; };
 		AF2148AA2A1F97860004781E /* DashboardState.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2148A92A1F97860004781E /* DashboardState.swift */; };
 		AF2148AC2A20AD890004781E /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2148AB2A20AD890004781E /* CoordinatorProtocol.swift */; };
+		AF2148AF2A214C070004781E /* BottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2148AE2A214C070004781E /* BottomSheetViewController.swift */; };
+		AF2148B12A214C260004781E /* BottomSheetContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2148B02A214C260004781E /* BottomSheetContentView.swift */; };
+		AF2148B32A214C2F0004781E /* BottomSheetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2148B22A214C2F0004781E /* BottomSheetViewModel.swift */; };
+		AF2148B52A2153540004781E /* BottomSheetCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2148B42A2153540004781E /* BottomSheetCoordinator.swift */; };
+		AF2148B72A2155650004781E /* BottomSheetState.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2148B62A2155650004781E /* BottomSheetState.swift */; };
 		AFD5C2CF2A1D2F9200A4D7AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD5C2CE2A1D2F9200A4D7AA /* AppDelegate.swift */; };
 		AFD5C2D12A1D2F9200A4D7AA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD5C2D02A1D2F9200A4D7AA /* SceneDelegate.swift */; };
 		AFD5C2D82A1D2F9300A4D7AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFD5C2D72A1D2F9300A4D7AA /* Assets.xcassets */; };
@@ -73,6 +78,11 @@
 		AF2148A72A1F889B0004781E /* SheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetView.swift; sourceTree = "<group>"; };
 		AF2148A92A1F97860004781E /* DashboardState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardState.swift; sourceTree = "<group>"; };
 		AF2148AB2A20AD890004781E /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
+		AF2148AE2A214C070004781E /* BottomSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetViewController.swift; sourceTree = "<group>"; };
+		AF2148B02A214C260004781E /* BottomSheetContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetContentView.swift; sourceTree = "<group>"; };
+		AF2148B22A214C2F0004781E /* BottomSheetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetViewModel.swift; sourceTree = "<group>"; };
+		AF2148B42A2153540004781E /* BottomSheetCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetCoordinator.swift; sourceTree = "<group>"; };
+		AF2148B62A2155650004781E /* BottomSheetState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetState.swift; sourceTree = "<group>"; };
 		AFD5C2CB2A1D2F9200A4D7AA /* UIArchitectureApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIArchitectureApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFD5C2CE2A1D2F9200A4D7AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFD5C2D02A1D2F9200A4D7AA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -207,6 +217,18 @@
 			path = Subviews;
 			sourceTree = "<group>";
 		};
+		AF2148AD2A214BF60004781E /* BottomSheet */ = {
+			isa = PBXGroup;
+			children = (
+				AF2148B02A214C260004781E /* BottomSheetContentView.swift */,
+				AF2148B42A2153540004781E /* BottomSheetCoordinator.swift */,
+				AF2148B62A2155650004781E /* BottomSheetState.swift */,
+				AF2148AE2A214C070004781E /* BottomSheetViewController.swift */,
+				AF2148B22A214C2F0004781E /* BottomSheetViewModel.swift */,
+			);
+			path = BottomSheet;
+			sourceTree = "<group>";
+		};
 		AFD5C2C22A1D2F9200A4D7AA = {
 			isa = PBXGroup;
 			children = (
@@ -238,6 +260,7 @@
 			isa = PBXGroup;
 			children = (
 				AFD5C2E42A1D2FCF00A4D7AA /* HostingViewContoller.swift */,
+				AF2148AD2A214BF60004781E /* BottomSheet */,
 				AF21487E2A1EACBC0004781E /* NavigationScreens */,
 				AF21488B2A1EAD620004781E /* TabBar */,
 			);
@@ -408,6 +431,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF21488F2A1EB2F20004781E /* ProfileCoordinator.swift in Sources */,
+				AF2148B32A214C2F0004781E /* BottomSheetViewModel.swift in Sources */,
 				AF2148882A1EAD2D0004781E /* DashboardViewController.swift in Sources */,
 				AF2148A32A1F666A0004781E /* ItemDetailsViewModel.swift in Sources */,
 				AFD5C2F52A1D2FCF00A4D7AA /* SecondContentView.swift in Sources */,
@@ -415,15 +439,19 @@
 				AFD5C2F32A1D2FCF00A4D7AA /* SecondViewModel.swift in Sources */,
 				AF2148AA2A1F97860004781E /* DashboardState.swift in Sources */,
 				AFD5C2CF2A1D2F9200A4D7AA /* AppDelegate.swift in Sources */,
+				AF2148AF2A214C070004781E /* BottomSheetViewController.swift in Sources */,
 				AFD5C2D12A1D2F9200A4D7AA /* SceneDelegate.swift in Sources */,
 				AFD5C2F02A1D2FCF00A4D7AA /* FirstViewController.swift in Sources */,
+				AF2148B12A214C260004781E /* BottomSheetContentView.swift in Sources */,
 				AFD5C2F12A1D2FCF00A4D7AA /* FirstViewModel.swift in Sources */,
 				AF2148822A1EAD040004781E /* ProfileViewController.swift in Sources */,
 				AF2148862A1EAD230004781E /* DashboardContentView.swift in Sources */,
 				AF2148792A1D37010004781E /* ThirdContentView.swift in Sources */,
 				AFD5C2EE2A1D2FCF00A4D7AA /* InitialViewController.swift in Sources */,
 				AF21488A2A1EAD3A0004781E /* DashboardViewModel.swift in Sources */,
+				AF2148B52A2153540004781E /* BottomSheetCoordinator.swift in Sources */,
 				AF2148A62A1F88820004781E /* PopUpView.swift in Sources */,
+				AF2148B72A2155650004781E /* BottomSheetState.swift in Sources */,
 				AFD5C2F62A1D2FCF00A4D7AA /* NavigationCoordinator.swift in Sources */,
 				AF2148962A1EC2720004781E /* ProfileSettingsContentView.swift in Sources */,
 				AF21489A2A1EC2880004781E /* ProfileSettingsViewModel.swift in Sources */,

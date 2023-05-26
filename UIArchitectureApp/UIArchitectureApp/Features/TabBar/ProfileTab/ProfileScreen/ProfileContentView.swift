@@ -11,9 +11,19 @@ struct ProfileContentView: View {
 
     @ObservedObject var viewModel: ProfileViewModel
 
+    @ObservedObject var state: BottomSheetState = .init()
+
     var body: some View {
-        Button("Push ProfileSettingsViewController") {
-            viewModel.pushProfileSettings()
+        VStack(spacing: 24) {
+            Button("Push ProfileSettingsViewController") {
+                self.viewModel.pushProfileSettings()
+            }
+            Button("Push BottomSheetViewController") {
+                self.viewModel.pushBottomSheet(state: state)
+            }
+            Text("BottomSheet Counter: \(state.counter)").foregroundColor(.red)
+        }.onReceive(state.$shouldBeClosed) { _ in
+            self.viewModel.dimissBottomSheet()
         }
     }
 }

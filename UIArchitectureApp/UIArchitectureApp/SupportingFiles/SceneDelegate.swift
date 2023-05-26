@@ -7,11 +7,23 @@
 
 import UIKit
 
+extension UIApplication {
+
+    var sceneDelegate: SceneDelegate? {
+        let scene = UIApplication.shared.connectedScenes.first
+        return scene?.delegate as? SceneDelegate
+    }
+
+    var window: UIWindow? {
+        sceneDelegate?.window
+    }
+}
+
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
 
-    private let tabBarController = TabBarController()
+    let tabBarController = TabBarController()
 
     private lazy var mainNavigationController = UINavigationController(rootViewController: InitialViewController())
 
@@ -59,25 +71,5 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Called as the scene transitions from the foreground to the background.
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
-    }
-}
-
-class TEST: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .white
-        title = "Dashboard"
-        tabBarItem = UITabBarItem(title: "Dashboard", image: UIImage(systemName: "1.circle"), tag: 0)
-    }
-}
-
-class TEST1: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .white
-        title = "Dashboard"
-        tabBarItem = UITabBarItem(title: "Dashboard", image: UIImage(systemName: "1.circle"), tag: 1)
     }
 }

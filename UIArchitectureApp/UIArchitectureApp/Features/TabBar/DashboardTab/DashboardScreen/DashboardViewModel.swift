@@ -30,9 +30,9 @@ final class DashboardViewModel: ObservableObject {
     }
 
     func pushInitialViewController() {
-        let scene = UIApplication.shared.connectedScenes.first
-        if let sceneDelegate = scene?.delegate as? SceneDelegate {
-            sceneDelegate.switchToMainNavigationController()
-        }
+        UIApplication
+            .shared
+            .sceneDelegate?
+            .switchToMainNavigationController()
     }
 }

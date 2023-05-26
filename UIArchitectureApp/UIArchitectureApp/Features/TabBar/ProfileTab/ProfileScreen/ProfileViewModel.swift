@@ -9,24 +9,32 @@ import UIKit
 
 final class ProfileViewModel: ObservableObject {
 
-    @Published var property: Int = 0
-
     private let coordinator: ProfileCoordinator
+    private let bottomSheetCoordinator: BottomSheetCoordinator
 
     private weak var navigationController: UINavigationController?
 
     init(navigationController: UINavigationController?) {
         coordinator = ProfileCoordinator(navigationController: navigationController)
+        bottomSheetCoordinator = BottomSheetCoordinator(navigationController: navigationController)
     }
 
     func pushProfileSettings() {
         coordinator.pushProfileSettings()
     }
 
+    func pushBottomSheet(state: BottomSheetState) {
+        bottomSheetCoordinator.presentSheet(state: state)
+    }
+
+    func dimissBottomSheet() {
+        bottomSheetCoordinator.dismissSheet()
+    }
+
     func pushInitialViewController() {
-        let scene = UIApplication.shared.connectedScenes.first
-        if let sceneDelegate = scene?.delegate as? SceneDelegate {
-            sceneDelegate.switchToMainNavigationController()
-        }
+        UIApplication
+            .shared
+            .sceneDelegate?
+            .switchToMainNavigationController()
     }
 }

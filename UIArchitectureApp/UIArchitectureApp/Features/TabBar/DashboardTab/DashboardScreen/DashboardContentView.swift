@@ -30,7 +30,7 @@ struct DashboardContentView: View {
                     self.shouldPresentSheetView.toggle()
                 }
                 .sheet(isPresented: $shouldPresentSheetView) {
-                    SheetView()
+                    SheetView().presentationDetents([.height(250)])
                 }
             }
 
