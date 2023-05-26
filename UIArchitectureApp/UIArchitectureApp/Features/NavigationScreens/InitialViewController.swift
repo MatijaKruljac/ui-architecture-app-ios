@@ -10,9 +10,10 @@ import UIKit
 
 final class InitialViewController: UIViewController {
 
-    private let firstButton = UIButton()
-    private let secondButton = UIButton()
-    private let thirdButton = UIButton()
+    private let firstButton = UIButton(type: .system)
+    private let secondButton = UIButton(type: .system)
+    private let thirdButton = UIButton(type: .system)
+    private let fourthButton = UIButton(type: .system)
     private let stackView = UIStackView()
 
     private lazy var coordinator: NavigationCoordinator? = .init(navigationController: navigationController)
@@ -26,6 +27,7 @@ final class InitialViewController: UIViewController {
         stackView.addArrangedSubview(firstButton)
         stackView.addArrangedSubview(secondButton)
         stackView.addArrangedSubview(thirdButton)
+        stackView.addArrangedSubview(fourthButton)
 
         stackView.axis = .vertical
         stackView.alignment = .center
@@ -33,16 +35,24 @@ final class InitialViewController: UIViewController {
         stackView.spacing = 20
 
         firstButton.setTitle("FirstViewController", for: .normal)
-        firstButton.backgroundColor = .black
         firstButton.addTarget(self, action: #selector(didTapFirstButton), for: .touchUpInside)
+        firstButton.tintColor = .white
+        firstButton.backgroundColor = UIColor.black.withAlphaComponent(0.7)
 
         secondButton.setTitle("SecondViewController", for: .normal)
         secondButton.addTarget(self, action: #selector(didTapSecondButton), for: .touchUpInside)
-        secondButton.backgroundColor = .black
+        secondButton.tintColor = .white
+        secondButton.backgroundColor = UIColor.black.withAlphaComponent(0.7)
 
         thirdButton.setTitle("ThirdViewController", for: .normal)
         thirdButton.addTarget(self, action: #selector(didTapThirdButton), for: .touchUpInside)
-        thirdButton.backgroundColor = .black
+        thirdButton.tintColor = .white
+        thirdButton.backgroundColor = UIColor.black.withAlphaComponent(0.7)
+
+        fourthButton.setTitle("TabBarController", for: .normal)
+        fourthButton.addTarget(self, action: #selector(didTapFourthButton), for: .touchUpInside)
+        fourthButton.tintColor = .white
+        fourthButton.backgroundColor = UIColor.black.withAlphaComponent(0.7)
 
         firstButton.snp.makeConstraints {
             $0.width.equalTo(200)
@@ -55,6 +65,11 @@ final class InitialViewController: UIViewController {
         }
 
         thirdButton.snp.makeConstraints {
+            $0.width.equalTo(200)
+            $0.height.equalTo(48)
+        }
+
+        fourthButton.snp.makeConstraints {
             $0.width.equalTo(200)
             $0.height.equalTo(48)
         }
@@ -85,5 +100,9 @@ final class InitialViewController: UIViewController {
 
     @objc func didTapThirdButton() {
         coordinator?.pushThirdViewController()
+    }
+
+    @objc func didTapFourthButton() {
+
     }
 }

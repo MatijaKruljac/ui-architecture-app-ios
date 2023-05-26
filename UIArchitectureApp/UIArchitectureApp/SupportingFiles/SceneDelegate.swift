@@ -13,13 +13,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     private let tabBarController = TabBarController()
 
+    private lazy var mainNavigationController = UINavigationController(rootViewController: InitialViewController())
+
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let scene: UIWindowScene = (scene as? UIWindowScene) else {
             return
         }
 
         window = UIWindow(windowScene: scene)
-        window?.rootViewController = tabBarController // UINavigationController(rootViewController: InitialViewController())
+        window?.rootViewController = mainNavigationController // tabBarController
         window?.makeKeyAndVisible()
     }
 

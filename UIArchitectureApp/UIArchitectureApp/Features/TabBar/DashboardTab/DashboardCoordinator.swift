@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class DashboardCoordinator {
+final class DashboardCoordinator: CoordinatorProtocol {
 
     private weak var navigationController: UINavigationController?
 

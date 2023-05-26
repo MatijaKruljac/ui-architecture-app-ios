@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class ProfileCoordinator {
+final class ProfileCoordinator: CoordinatorProtocol {
 
     private weak var navigationController: UINavigationController?
 

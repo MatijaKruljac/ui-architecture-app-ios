@@ -30,6 +30,7 @@
 		AF2148A62A1F88820004781E /* PopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2148A52A1F88820004781E /* PopUpView.swift */; };
 		AF2148A82A1F889B0004781E /* SheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2148A72A1F889B0004781E /* SheetView.swift */; };
 		AF2148AA2A1F97860004781E /* DashboardState.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2148A92A1F97860004781E /* DashboardState.swift */; };
+		AF2148AC2A20AD890004781E /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2148AB2A20AD890004781E /* CoordinatorProtocol.swift */; };
 		AFD5C2CF2A1D2F9200A4D7AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD5C2CE2A1D2F9200A4D7AA /* AppDelegate.swift */; };
 		AFD5C2D12A1D2F9200A4D7AA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD5C2D02A1D2F9200A4D7AA /* SceneDelegate.swift */; };
 		AFD5C2D82A1D2F9300A4D7AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFD5C2D72A1D2F9300A4D7AA /* Assets.xcassets */; };
@@ -71,6 +72,7 @@
 		AF2148A52A1F88820004781E /* PopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpView.swift; sourceTree = "<group>"; };
 		AF2148A72A1F889B0004781E /* SheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetView.swift; sourceTree = "<group>"; };
 		AF2148A92A1F97860004781E /* DashboardState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardState.swift; sourceTree = "<group>"; };
+		AF2148AB2A20AD890004781E /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
 		AFD5C2CB2A1D2F9200A4D7AA /* UIArchitectureApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIArchitectureApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFD5C2CE2A1D2F9200A4D7AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFD5C2D02A1D2F9200A4D7AA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 		AF21488B2A1EAD620004781E /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
+				AF2148AB2A20AD890004781E /* CoordinatorProtocol.swift */,
 				AF21489B2A1F54210004781E /* TabBarController.swift */,
 				AF21488C2A1EB1090004781E /* ViewControllerFactory.swift */,
 				AF21487C2A1EAC8B0004781E /* DashboardTab */,
@@ -432,6 +435,7 @@
 				AFD5C2F42A1D2FCF00A4D7AA /* SecondViewController.swift in Sources */,
 				AF2148842A1EAD0F0004781E /* ProfileViewModel.swift in Sources */,
 				AF2148802A1EACFA0004781E /* ProfileContentView.swift in Sources */,
+				AF2148AC2A20AD890004781E /* CoordinatorProtocol.swift in Sources */,
 				AF2148912A1EB3210004781E /* DashboardCoordinator.swift in Sources */,
 				AF2148772A1D36F40004781E /* ThirdViewController.swift in Sources */,
 				AF21489F2A1F66560004781E /* ItemDetailsViewController.swift in Sources */,
