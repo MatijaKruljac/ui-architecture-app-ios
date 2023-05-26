@@ -11,20 +11,16 @@ final class TabBarController: UITabBarController {
 
     private let dashboardNavigationController: UINavigationController
     private let dashboardViewController: DashboardViewController
-    private let dashboardCoordinator: DashboardCoordinator
 
     private let profileNavigationController: UINavigationController
-    private let profileCoordinator: ProfileCoordinator
     private let profileViewController: ProfileViewController
 
     init() {
         dashboardNavigationController = UINavigationController()
-        dashboardCoordinator = DashboardCoordinator(navigationController: dashboardNavigationController)
         dashboardViewController = ViewControllerFactory.tabDashboardViewController(navigationController: dashboardNavigationController)
         dashboardNavigationController.viewControllers = [dashboardViewController]
 
         profileNavigationController = UINavigationController()
-        profileCoordinator = ProfileCoordinator(navigationController: profileNavigationController)
         profileViewController = ViewControllerFactory.tabProfileViewController(navigationController: profileNavigationController)
         profileNavigationController.viewControllers = [profileViewController]
 
