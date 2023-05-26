@@ -103,6 +103,6 @@ final class InitialViewController: UIViewController {
     }
 
     @objc func didTapFourthButton() {
-
+        coordinator?.pushTabBarController()
     }
 }

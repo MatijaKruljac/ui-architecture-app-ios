@@ -23,6 +23,13 @@ final class DashboardViewController: HostingViewController<DashboardContentView>
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let backButtonItem = UIBarButtonItem(
+            title: "Back",
+            style: .plain,
+            target: self,
+            action: #selector(didTapBackButtonItem)
+        )
+
         let infoButtonItem = UIBarButtonItem(
             title: "Info",
             style: .plain,
@@ -30,7 +37,12 @@ final class DashboardViewController: HostingViewController<DashboardContentView>
             action: #selector(didTapInfoButtonItem)
         )
 
+        navigationItem.leftBarButtonItem = backButtonItem
         navigationItem.rightBarButtonItem = infoButtonItem
+    }
+
+    @objc func didTapBackButtonItem() {
+        rootView.viewModel.pushInitialViewController()
     }
 
     @objc func didTapInfoButtonItem() {

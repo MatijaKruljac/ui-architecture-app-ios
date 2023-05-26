@@ -35,4 +35,11 @@ final class NavigationCoordinator {
         let thirdViewController = ThirdViewController(contentView: thirdContentView)
         navigationController?.pushViewController(thirdViewController, animated: true)
     }
+
+    func pushTabBarController() {
+        let scene = UIApplication.shared.connectedScenes.first
+        if let sceneDelegate = scene?.delegate as? SceneDelegate {
+            sceneDelegate.window?.rootViewController = TabBarController()
+        }
+    }
 }
