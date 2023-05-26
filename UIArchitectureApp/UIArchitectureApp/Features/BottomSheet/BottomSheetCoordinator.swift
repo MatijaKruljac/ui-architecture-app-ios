@@ -18,15 +18,18 @@ final class BottomSheetCoordinator: CoordinatorProtocol {
 
     private var backgroundView: UIView?
     private var bottomSheetViewController: BottomSheetViewController?
+    private var height: CGFloat = 0
 
     init(navigationController: UINavigationController?) {
         self.navigationController = navigationController
     }
 
-    func presentSheet(state: BottomSheetState) {
+    func presentSheet(state: BottomSheetState, height: CGFloat = 350) {
         guard let tabBarController = UIApplication.shared.sceneDelegate?.tabBarController else {
             return
         }
+
+        self.height = height
 
         backgroundView = UIView()
         guard let backgroundView else {
@@ -52,15 +55,16 @@ final class BottomSheetCoordinator: CoordinatorProtocol {
         tabBarController.addChild(bottomSheetViewController)
         tabBarController.view.addSubview(bottomSheetViewController.view)
         bottomSheetViewController.view.snp.makeConstraints {
-            $0.leading.bottom.trailing.equalToSuperview()
-            $0.height.equalTo(0)
+            $0.leading.trailing.equalToSuperview()
+            $0.bottom.equalToSuperview().offset(height)
+            $0.height.equalTo(height)
         }
 
         UIView.animate(withDuration: 0.3, animations: {
             backgroundView.alpha = 0.5
         }, completion: { _ in
             self.bottomSheetViewController?.view.snp.updateConstraints {
-                $0.height.equalTo(350)
+                $0.bottom.equalToSuperview().offset(0)
             }
             UIView.animate(withDuration: 0.3) {
                 tabBarController.view.layoutIfNeeded()
@@ -75,7 +79,7 @@ final class BottomSheetCoordinator: CoordinatorProtocol {
 
         UIView.animate(withDuration: 0.3, animations: {
             self.bottomSheetViewController?.view.snp.updateConstraints {
-                $0.height.equalTo(0)
+                $0.bottom.equalToSuperview().offset(self.height)
             }
             UIView.animate(withDuration: 0.3) {
                 tabBarController.view.layoutIfNeeded()
