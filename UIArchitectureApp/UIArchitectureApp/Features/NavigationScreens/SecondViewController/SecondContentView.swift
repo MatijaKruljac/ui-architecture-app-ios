@@ -13,7 +13,7 @@ final class CounterData: ObservableObject {
 }
 
 struct SecondContentView: View {
-    
+
     @ObservedObject var viewModel: SecondViewModel
     @ObservedObject var counterData: CounterData
 
