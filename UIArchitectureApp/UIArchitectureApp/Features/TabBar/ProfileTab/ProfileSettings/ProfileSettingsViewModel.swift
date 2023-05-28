@@ -9,8 +9,6 @@ import UIKit
 
 final class ProfileSettingsViewModel: ObservableObject {
 
-    @Published var property: Int = 0
-
     private let coordinator: ProfileCoordinator
 
     private weak var navigationController: UINavigationController?

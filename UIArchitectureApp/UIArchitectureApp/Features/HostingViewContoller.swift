@@ -13,11 +13,11 @@ class HostingViewController<ContentView: View>: UIViewController {
 
     let hostingController: UIHostingController<ContentView>
 
+    var rootView: ContentView
+
     var navigationBarBackgroundColor: UIColor {
         .yellow
     }
-
-    var rootView: ContentView
 
     init(contentView: ContentView) {
         hostingController = UIHostingController(rootView: contentView)
