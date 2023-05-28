@@ -9,8 +9,6 @@ import UIKit
 
 final class DashboardViewModel: ObservableObject {
 
-    @Published var property: Int = 0
-
     private let dashboardCoordinator: DashboardCoordinator
     private let profileCoordinator: ProfileCoordinator
 
