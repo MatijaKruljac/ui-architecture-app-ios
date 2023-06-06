@@ -5,8 +5,8 @@
 //  Created by Matija Kruljac on 23.05.2023..
 //
 
-import SwiftUI
 import SnapKit
+import SwiftUI
 import UIKit
 
 class HostingViewController<ContentView: View>: UIViewController {
